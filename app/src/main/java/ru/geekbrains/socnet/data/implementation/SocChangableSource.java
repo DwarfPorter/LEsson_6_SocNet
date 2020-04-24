@@ -1,4 +1,7 @@
-package ru.geekbrains.socnet;
+package ru.geekbrains.socnet.data.implementation;
+
+import ru.geekbrains.socnet.data.SocialChangableSource;
+import ru.geekbrains.socnet.data.SocialDataSource;
 
 public class SocChangableSource implements SocialChangableSource {
 

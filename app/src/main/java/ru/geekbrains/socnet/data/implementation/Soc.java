@@ -1,4 +1,4 @@
-package ru.geekbrains.socnet;
+package ru.geekbrains.socnet.data.implementation;
 
 public class Soc {
     private String description; // описание

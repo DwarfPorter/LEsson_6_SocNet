@@ -1,4 +1,4 @@
-package ru.geekbrains.socnet;
+package ru.geekbrains.socnet.ui;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +10,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import ru.geekbrains.socnet.R;
+import ru.geekbrains.socnet.data.implementation.Soc;
+import ru.geekbrains.socnet.data.SocialDataSource;
+
 public class SocnetAdapter extends RecyclerView.Adapter<SocnetAdapter.ViewHolder> {
 
-    private SocialDataSource  dataSource;
+    private SocialDataSource dataSource;
     private OnItemClickListener itemClickListener;
 
     public SocnetAdapter(SocialDataSource  dataSource) {

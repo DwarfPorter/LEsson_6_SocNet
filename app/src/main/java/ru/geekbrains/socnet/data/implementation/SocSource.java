@@ -1,10 +1,13 @@
-package ru.geekbrains.socnet;
+package ru.geekbrains.socnet.data.implementation;
 
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ru.geekbrains.socnet.R;
+import ru.geekbrains.socnet.data.SocialDataSource;
 
 public class SocSource implements SocialDataSource {
     private List<Soc> dataSource;   // строим этот источник данных

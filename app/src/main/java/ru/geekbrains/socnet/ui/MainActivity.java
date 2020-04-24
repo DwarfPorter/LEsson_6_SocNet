@@ -1,4 +1,4 @@
-package ru.geekbrains.socnet;
+package ru.geekbrains.socnet.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -10,6 +10,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import ru.geekbrains.socnet.R;
+import ru.geekbrains.socnet.data.implementation.SocChangableSource;
+import ru.geekbrains.socnet.data.implementation.SocSourceBuilder;
+import ru.geekbrains.socnet.data.SocialChangableSource;
+import ru.geekbrains.socnet.data.SocialDataSource;
 
 public class MainActivity extends AppCompatActivity {
 

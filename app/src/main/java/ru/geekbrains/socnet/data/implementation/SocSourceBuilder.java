@@ -1,5 +1,8 @@
-package ru.geekbrains.socnet;
+package ru.geekbrains.socnet.data.implementation;
 import android.content.res.Resources;
+
+import ru.geekbrains.socnet.data.SocialDataSource;
+
 public class SocSourceBuilder {
     private Resources resources;
 
