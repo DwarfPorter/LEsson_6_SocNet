@@ -1,6 +1,7 @@
 package ru.geekbrains.socnet;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sourceChangableData.add();
-                socnetAdapter.notifyDataSetChanged();
+                socnetAdapter.notifyItemInserted(sourceChangableData.size());
             }
         });
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sourceChangableData.delete();
-                socnetAdapter.notifyDataSetChanged();
+                socnetAdapter.notifyItemRemoved(sourceChangableData.size());
             }
         });
     }
@@ -64,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         DividerItemDecoration itemDecoration = new DividerItemDecoration(this, LinearLayoutManager.VERTICAL);
         itemDecoration.setDrawable(getDrawable(R.drawable.separator));
         recyclerView.addItemDecoration(itemDecoration);
+
+        DefaultItemAnimator animator = new DefaultItemAnimator();
+        animator.setAddDuration(500);
+        animator.setRemoveDuration(500);
+        recyclerView.setItemAnimator(animator);
 
         // Установим слушателя
         adapter.SetOnItemClickListener(new SocnetAdapter.OnItemClickListener() {
